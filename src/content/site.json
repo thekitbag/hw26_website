@@ -1,0 +1,23 @@
+{
+  "site": {
+      "name": "Harkwise",
+      "tagline": "Turn every visit into insight",
+      "description": "Simple QR-based feedback for offline businesses",
+      "email": "mark@harkwise.com",
+      "phone": "07872 944542"
+    },
+    "navigation": {
+      "main": [
+        { "label": "How it works", "href": "#how-it-works" },
+        { "label": "For your business", "href": "#segments" },
+        { "label": "Examples", "href": "#examples" },
+        { "label": "Pricing", "href": "#pricing" },
+        { "label": "Contact", "href": "#contact" }
+      ]
+    },
+    "cta": {
+      "primary": "Start free",
+      "secondary": "See how it works"
+    }
+  }
+
