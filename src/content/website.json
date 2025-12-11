@@ -1,0 +1,231 @@
+{
+  "hero": {
+    "headline": "Turn every visit into actionable feedback",
+    "subheadline": "Guests scan a QR, rate in 30 seconds, and you get alerts before reviews go public. Anonymous by default. No app ever.",
+    "benefits": [
+      "Live in under 5 minutes",
+      "Anonymous by default",
+      "No customer app required"
+    ]
+  },
+  "proofPoints": [
+    {
+      "stat": "30s",
+      "label": "Feedback flow",
+      "description": "Frictionless QR scan on any phone"
+    },
+    {
+      "stat": "Live",
+      "label": "Alerts & trends",
+      "description": "See issues before they hit public reviews"
+    },
+    {
+      "stat": "Weekly",
+      "label": "Summaries",
+      "description": "Digest of scores, themes, and actions"
+    }
+  ],
+  "segments": [
+    {
+      "id": "food-beverage",
+      "name": "Food & Beverage",
+      "icon": "utensils",
+      "tagline": "Keep guests coming back",
+      "benefits": [
+        "Track service quality by daypart",
+        "Spot wait-time pain fast",
+        "See which items drive repeat visits",
+        "Collect quotes with consent"
+      ],
+      "example": "Cafés, QSR, casual dining"
+    },
+    {
+      "id": "hospitality",
+      "name": "Hospitality & Lodging",
+      "icon": "bed",
+      "tagline": "Delight guests before checkout",
+      "benefits": [
+        "Capture stay feedback in-stay",
+        "Compare satisfaction by property",
+        "Fix room/amenity issues quickly",
+        "Reduce negative public reviews"
+      ],
+      "example": "Hotels, hostels, vacation rentals"
+    },
+    {
+      "id": "wellness",
+      "name": "Health & Wellness",
+      "icon": "heart",
+      "tagline": "Great experiences, every visit",
+      "benefits": [
+        "Coach staff with real client input",
+        "Improve check-in and wait times",
+        "Track satisfaction by service type",
+        "Capture testimonials with consent"
+      ],
+      "example": "Salons, spas, fitness studios"
+    },
+    {
+      "id": "retail-services",
+      "name": "Retail & Services",
+      "icon": "store",
+      "tagline": "Understand shoppers in the moment",
+      "benefits": [
+        "See what drives repeat purchases",
+        "Spot friction at checkout",
+        "Compare shifts and locations",
+        "Gather product feedback fast"
+      ],
+      "example": "Retail, auto, repair, clinics"
+    }
+  ],
+  "howItWorks": {
+    "title": "Simple as 1-2-3",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Place your QR",
+        "description": "We generate your branded poster. Put it on counters, tables, or receipts.",
+        "icon": "printer"
+      },
+      {
+        "number": 2,
+        "title": "Guests rate in 30 seconds",
+        "description": "No app. Anonymous by default. Works on any phone camera.",
+        "icon": "scan"
+      },
+      {
+        "number": 3,
+        "title": "Act on live insights",
+        "description": "Alerts for issues, weekly summaries for trends, and themes you can share.",
+        "icon": "chart"
+      }
+    ]
+  },
+  "examples": {
+    "title": "See what you'll get",
+    "description": "Product screenshots, not mockups",
+    "items": [
+      {
+        "type": "dashboard",
+        "title": "Insights dashboard",
+        "description": "Scores by day, themes, and verbatims"
+      },
+      {
+        "type": "poster",
+        "title": "Branded QR poster",
+        "description": "Ready to print with your logo/colors"
+      },
+      {
+        "type": "report",
+        "title": "Weekly summary",
+        "description": "Email digest of trends and actions"
+      }
+    ]
+  },
+  "social-proof": {
+    "testimonials": []
+  },
+  "trust": {
+    "title": "Why Harkwise is trusted",
+    "reasons": [
+      "Anonymous by default; no spam",
+      "Data encrypted in transit and at rest",
+      "You own your feedback; we don't sell data",
+      "No app installs for guests"
+    ]
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Start with a 14-day trial of Growth, then pick the plan that fits",
+    "plans": [
+      {
+        "name": "Starter (Pilot)",
+        "price": "Free",
+        "period": "for 14 days",
+        "description": "Pilot with your team",
+        "features": [
+          "Up to 100 responses",
+          "1 location, 1 QR",
+          "Core dashboard",
+          "Email support"
+        ],
+        "cta": "Start 14-day trial",
+        "highlighted": false
+      },
+      {
+        "name": "Growth",
+        "price": "$29",
+        "period": "per month after trial",
+        "description": "For growing businesses",
+        "features": [
+          "Unlimited responses",
+          "Multiple QRs/locations",
+          "Advanced analytics",
+          "Weekly summaries",
+          "Priority support",
+          "Custom branding"
+        ],
+        "cta": "Start 14-day trial",
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "contact us",
+        "description": "For multi-location teams",
+        "features": [
+          "Everything in Growth",
+          "Multi-location rollups",
+          "API access",
+          "Dedicated support",
+          "Custom integrations"
+        ],
+        "cta": "Contact sales",
+        "highlighted": false
+      }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Do guests need an app?",
+      "answer": "No. They scan the QR with their camera and answer in their browser in about 30 seconds."
+    },
+    {
+      "question": "How long does setup take?",
+      "answer": "Most teams are live in 5 minutes. Sign up, pick questions, print your poster, and you're ready."
+    },
+    {
+      "question": "Can I customize questions?",
+      "answer": "Yes. Use our templates or your own questions anytime."
+    },
+    {
+      "question": "Can I cancel anytime?",
+      "answer": "Yes. No long-term contracts. Upgrade, downgrade, or cancel whenever you want."
+    },
+    {
+      "question": "Is customer data secure?",
+      "answer": "Yes. Data is encrypted in transit and at rest. Feedback is anonymous by default, and we don't sell data."
+    }
+  ],
+  "cta": {
+    "primary": "Start 14-day trial",
+    "secondary": "See how it works"
+  },
+  "site": {
+    "name": "Harkwise",
+    "tagline": "Turn every visit into insight",
+    "description": "Simple QR-based feedback for offline businesses",
+    "email": "mark@harkwise.com",
+    "phone": "07872 944542"
+  },
+  "navigation": {
+    "main": [
+      { "label": "How it works", "href": "#how-it-works" },
+      { "label": "For your business", "href": "#segments" },
+      { "label": "Examples", "href": "#examples" },
+      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  }
+}

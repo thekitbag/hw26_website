@@ -1,10 +1,25 @@
 import { Star } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
-import content from '../../content/homepage.json'
+import content from '../../content/website.json'
+import TrustSection from './TrustSection'
+
+interface Testimonial {
+  quote: string
+  author: string
+  business: string
+  rating: number
+}
 
 export default function TestimonialsSection() {
-  const { testimonials } = content['social-proof']
+  const { testimonials } = content['social-proof'] as {
+    testimonials: Testimonial[]
+  }
+
+  // If no testimonials, show Trust section instead
+  if (!testimonials || testimonials.length === 0) {
+    return <TrustSection />
+  }
 
   return (
     <Section background="white">

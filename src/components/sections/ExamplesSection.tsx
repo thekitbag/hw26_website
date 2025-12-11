@@ -1,7 +1,7 @@
 import { LayoutDashboard, FileText, Mail } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
-import content from '../../content/homepage.json'
+import content from '../../content/website.json'
 
 const iconMap = {
   dashboard: LayoutDashboard,

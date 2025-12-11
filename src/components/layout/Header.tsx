@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Button from '../ui/Button'
-import siteContent from '../../content/site.json'
+import content from '../../content/website.json'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { site, navigation, cta } = content
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
@@ -12,13 +13,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold text-primary-600">
-              {siteContent.site.name}
+              {site.name}
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {siteContent.navigation.main.map((item) => (
+            {navigation.main.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -27,7 +28,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <Button href="#signup">{siteContent.cta.primary}</Button>
+            <Button href="#signup">{cta.primary}</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -48,7 +49,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <div className="flex flex-col space-y-4">
-              {siteContent.navigation.main.map((item) => (
+              {navigation.main.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
@@ -59,7 +60,7 @@ export default function Header() {
                 </a>
               ))}
               <Button href="#signup" className="w-full">
-                {siteContent.cta.primary}
+                {cta.primary}
               </Button>
             </div>
           </div>

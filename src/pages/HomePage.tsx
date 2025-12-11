@@ -11,14 +11,17 @@ import FAQSection from '../components/sections/FAQSection'
 import SignupSection from '../components/sections/SignupSection'
 import ContactSection from '../components/sections/ContactSection'
 import SEO from '../components/SEO'
+import content from '../content/website.json'
 
 export default function HomePage() {
+  const { hero, site } = content
+
   return (
     <>
       <SEO
-        title="Harkwise - Simple Customer Feedback for Offline Businesses"
-        description="Turn every customer into your next with Harkwise. Get actionable feedback from your offline customers with simple QR codes. No apps. No hassle."
-        keywords="customer feedback, QR code feedback, offline business, restaurant feedback, cafe feedback, salon feedback"
+        title={`${site.name} - ${site.tagline}`}
+        description={hero.subheadline}
+        keywords="customer feedback, QR code feedback, offline business, restaurant feedback, hotel feedback, salon feedback, retail feedback"
       />
       <div className="min-h-screen flex flex-col">
         <Header />

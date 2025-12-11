@@ -2,10 +2,12 @@ import { useState, FormEvent } from 'react'
 import Section from '../ui/Section'
 import Button from '../ui/Button'
 import { trackSignupAttempt } from '../../utils/analytics'
+import content from '../../content/website.json'
 
 export default function SignupSection() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const { cta } = content
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -23,8 +25,7 @@ export default function SignupSection() {
           Ready to Get Started?
         </h2>
         <p className="text-lg text-gray-700 mb-8">
-          Join hundreds of businesses using Harkwise to understand their
-          customers better. Start free, no credit card required.
+          Start your 14-day trial today. No credit card required.
         </p>
 
         {!submitted ? (
@@ -42,7 +43,7 @@ export default function SignupSection() {
               aria-label="Email address"
             />
             <Button type="submit" size="md">
-              Start Free
+              {cta.primary}
             </Button>
           </form>
         ) : (

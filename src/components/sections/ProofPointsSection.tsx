@@ -1,5 +1,5 @@
 import Section from '../ui/Section'
-import content from '../../content/homepage.json'
+import content from '../../content/website.json'
 
 export default function ProofPointsSection() {
   const { proofPoints } = content
