@@ -1,12 +1,14 @@
-import { LayoutDashboard, FileText, Mail } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
 import content from '../../content/website.json'
+import portalScreenshot from '../../assets/portalscreenshot.png'
+import posterScreenshot from '../../assets/posterscreenshot.png'
+import emailScreenshot from '../../assets/emailscreenshot.png'
 
-const iconMap = {
-  dashboard: LayoutDashboard,
-  poster: FileText,
-  report: Mail,
+const imageMap = {
+  dashboard: portalScreenshot,
+  poster: posterScreenshot,
+  report: emailScreenshot,
 }
 
 export default function ExamplesSection() {
@@ -18,15 +20,20 @@ export default function ExamplesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {examples.items.map((item, index) => {
-          const Icon = iconMap[item.type as keyof typeof iconMap]
+          const imageSrc = imageMap[item.type as keyof typeof imageMap]
 
           return (
             <div
               key={index}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                <Icon className="w-20 h-20 text-primary-600 opacity-50" />
+              <div className="aspect-video bg-gray-100 overflow-hidden">
+                <img
+                  src={imageSrc}
+                  alt={item.title}
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">

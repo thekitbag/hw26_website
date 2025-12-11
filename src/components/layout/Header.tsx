@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Button from '../ui/Button'
 import content from '../../content/website.json'
+import logo from '../../assets/harkwise-logo.png'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -12,8 +13,12 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-primary-600">
-              {site.name}
+            <a href="/" className="flex items-center">
+              <img
+                src={logo}
+                alt={site.name}
+                className="h-8 w-auto"
+              />
             </a>
           </div>
 

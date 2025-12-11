@@ -1,7 +1,7 @@
 {
   "hero": {
     "headline": "Turn every visit into actionable feedback",
-    "subheadline": "Guests scan a QR, rate in 30 seconds, and you get alerts before reviews go public. Anonymous by default. No app ever.",
+    "subheadline": "Fast anonymous feedback via QR codes allow you to know what your customers are really thinking about your business.",
     "benefits": [
       "Live in under 5 minutes",
       "Anonymous by default",
@@ -80,25 +80,31 @@
     }
   ],
   "howItWorks": {
-    "title": "Simple as 1-2-3",
+    "title": "How it works",
     "steps": [
       {
         "number": 1,
-        "title": "Place your QR",
-        "description": "We generate your branded poster. Put it on counters, tables, or receipts.",
+        "title": "Print QR code for guests to scan",
+        "description": "We generate your branded poster. Place it on tables, counters, or receipts where guests can easily see it.",
         "icon": "printer"
       },
       {
         "number": 2,
-        "title": "Guests rate in 30 seconds",
-        "description": "No app. Anonymous by default. Works on any phone camera.",
+        "title": "Customers scan and give anonymous feedback",
+        "description": "No app download, no login required. Guests scan with their phone camera and answer in 30 seconds.",
         "icon": "scan"
       },
       {
         "number": 3,
-        "title": "Act on live insights",
-        "description": "Alerts for issues, weekly summaries for trends, and themes you can share.",
+        "title": "Self-service portal shows patterns and trends",
+        "description": "View real-time feedback, spot issues before they become problems, and track satisfaction over time.",
         "icon": "chart"
+      },
+      {
+        "number": 4,
+        "title": "Weekly email suggests areas to focus on",
+        "description": "Automatic summaries based on customer insights. See what's working and what needs attention.",
+        "icon": "email"
       }
     ]
   },
@@ -166,7 +172,7 @@
           "Priority support",
           "Custom branding"
         ],
-        "cta": "Start 14-day trial",
+        "cta": "Start 14-day free trial",
         "highlighted": true
       },
       {
@@ -209,21 +215,20 @@
     }
   ],
   "cta": {
-    "primary": "Start 14-day trial",
+    "primary": "Start 14-day free trial",
     "secondary": "See how it works"
   },
   "site": {
     "name": "Harkwise",
     "tagline": "Turn every visit into insight",
     "description": "Simple QR-based feedback for offline businesses",
-    "email": "mark@harkwise.com",
+    "email": "hello@harkwise.com",
     "phone": "07872 944542"
   },
   "navigation": {
     "main": [
       { "label": "How it works", "href": "#how-it-works" },
       { "label": "For your business", "href": "#segments" },
-      { "label": "Examples", "href": "#examples" },
       { "label": "Pricing", "href": "#pricing" },
       { "label": "Contact", "href": "#contact" }
     ]
