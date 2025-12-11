@@ -2,10 +2,10 @@ import { Check } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
 import Button from '../ui/Button'
-import pricingContent from '../../content/pricing.json'
+import content from '../../content/website.json'
 
 export default function PricingSection() {
-  const { pricing } = pricingContent
+  const { pricing } = content
 
   return (
     <Section id="pricing" background="white">
@@ -36,7 +36,9 @@ export default function PricingSection() {
                 {plan.price}
               </span>
               {plan.period && (
-                <span className="text-gray-600 ml-2">/{plan.period}</span>
+                <span className="text-gray-600 ml-2 text-sm">
+                  {plan.period}
+                </span>
               )}
             </div>
 

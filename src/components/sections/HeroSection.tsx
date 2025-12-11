@@ -1,10 +1,9 @@
 import { Check } from 'lucide-react'
 import Button from '../ui/Button'
-import content from '../../content/homepage.json'
-import siteContent from '../../content/site.json'
+import content from '../../content/website.json'
 
 export default function HeroSection() {
-  const { hero } = content
+  const { hero, cta } = content
 
   return (
     <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-primary-50 to-white">
@@ -19,10 +18,10 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button href="#signup" size="lg">
-              {siteContent.cta.primary}
+              {cta.primary}
             </Button>
             <Button href="#how-it-works" variant="outline" size="lg">
-              {siteContent.cta.secondary}
+              {cta.secondary}
             </Button>
           </div>
 

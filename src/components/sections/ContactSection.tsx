@@ -1,9 +1,11 @@
 import { Mail, Phone } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
-import siteContent from '../../content/site.json'
+import content from '../../content/website.json'
 
 export default function ContactSection() {
+  const { site } = content
+
   return (
     <Section id="contact" background="white">
       <SectionHeader
@@ -14,7 +16,7 @@ export default function ContactSection() {
       <div className="max-w-2xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <a
-            href={`mailto:${siteContent.site.email}`}
+            href={`mailto:${site.email}`}
             className="flex items-center gap-4 p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
           >
             <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
@@ -22,12 +24,12 @@ export default function ContactSection() {
             </div>
             <div>
               <div className="font-semibold text-gray-900">Email Us</div>
-              <div className="text-gray-600">{siteContent.site.email}</div>
+              <div className="text-gray-600">{site.email}</div>
             </div>
           </a>
 
           <a
-            href={`tel:${siteContent.site.phone}`}
+            href={`tel:${site.phone}`}
             className="flex items-center gap-4 p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
           >
             <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
@@ -35,7 +37,7 @@ export default function ContactSection() {
             </div>
             <div>
               <div className="font-semibold text-gray-900">Call Us</div>
-              <div className="text-gray-600">{siteContent.site.phone}</div>
+              <div className="text-gray-600">{site.phone}</div>
             </div>
           </a>
         </div>

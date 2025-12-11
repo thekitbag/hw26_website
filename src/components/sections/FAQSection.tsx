@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import Section from '../ui/Section'
 import SectionHeader from '../ui/SectionHeader'
-import pricingContent from '../../content/pricing.json'
+import content from '../../content/website.json'
 
 export default function FAQSection() {
-  const { faq } = pricingContent
+  const { faq } = content
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
