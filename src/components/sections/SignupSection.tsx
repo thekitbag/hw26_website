@@ -7,15 +7,47 @@ import content from '../../content/website.json'
 export default function SignupSection() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
   const { cta } = content
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    setLoading(true)
+    setError('')
+
     // Track signup attempt
     trackSignupAttempt()
-    // TODO: Integrate with actual signup/onboarding flow
-    console.log('Signup email:', email)
-    setSubmitted(true)
+
+    try {
+      // Submit to Formspree
+      // To use: Set VITE_FORMSPREE_FORM_ID in .env file
+      // Get your form ID from https://formspree.io/
+      const formspreeId = import.meta.env.VITE_FORMSPREE_FORM_ID || 'YOUR_FORM_ID'
+
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'New Harkwise Trial Signup',
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitted(true)
+        setEmail('')
+      } else {
+        throw new Error('Submission failed')
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again or email us directly.')
+      console.error('Form submission error:', err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -29,23 +61,31 @@ export default function SignupSection() {
         </p>
 
         {!submitted ? (
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              required
-              className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent"
-              aria-label="Email address"
-            />
-            <Button type="submit" size="md">
-              {cta.primary}
-            </Button>
-          </form>
+          <>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                disabled={loading}
+                className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                aria-label="Email address"
+              />
+              <Button type="submit" size="md" className={loading ? 'opacity-75 cursor-wait' : ''}>
+                {loading ? 'Submitting...' : cta.primary}
+              </Button>
+            </form>
+            {error && (
+              <div className="mt-4 p-3 bg-red-100 border border-red-300 rounded-lg text-red-700 max-w-md mx-auto">
+                {error}
+              </div>
+            )}
+          </>
         ) : (
           <div className="bg-white rounded-lg p-6 shadow-md max-w-md mx-auto">
             <h3 className="text-xl font-bold text-primary-600 mb-2">
