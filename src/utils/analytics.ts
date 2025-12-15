@@ -1,14 +1,5 @@
 // Analytics utility functions
-
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      action: string,
-      config?: Record<string, unknown>,
-    ) => void
-  }
-}
+import { posthog, isPostHogEnabled } from '../lib/posthog'
 
 interface AnalyticsEvent {
   event: string
@@ -25,18 +16,19 @@ export const trackEvent = ({
   label,
   value,
 }: AnalyticsEvent) => {
-  // TODO: Integrate with actual analytics service (Google Analytics, Plausible, etc.)
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', action, {
-      event_category: category,
-      event_label: label,
-      value: value,
+  // Only send to PostHog in production
+  if (typeof window !== 'undefined' && isPostHogEnabled()) {
+    posthog.capture(event, {
+      category,
+      action,
+      label,
+      value,
     })
   }
 
-  // For now, just log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Event:', { event, category, action, label, value })
+  // Always log to console in development for testing
+  if (import.meta.env.DEV) {
+    console.log('📊 Analytics Event:', { event, category, action, label, value })
   }
 }
 
