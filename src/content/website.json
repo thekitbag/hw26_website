@@ -130,7 +130,26 @@
     ]
   },
   "social-proof": {
-    "testimonials": []
+    "testimonials": [
+      {
+        "quote": "We used to hear about slow brunch service from public reviews days later. Now we see feedback the same afternoon and fix staffing before the weekend rush. We were live in under 10 minutes.",
+        "author": "James",
+        "business": "Cafe Owner",
+        "rating": 5
+      },
+      {
+        "quote": "Our team thought wait times were fine, but clients kept mentioning the same check-in bottleneck. Harkwise helped us spot the pattern by shift and adjust our handoff process. Rebooking comments improved within two weeks.",
+        "author": "Priya",
+        "business": "Salon Owner",
+        "rating": 5
+      },
+      {
+        "quote": "We now catch room and breakfast issues while guests are still on-site instead of after checkout. That gave our duty manager a clear daily action list and fewer negative reviews. Setup was straightforward for front desk staff.",
+        "author": "Daniel",
+        "business": "Hotel Manager",
+        "rating": 5
+      }
+    ]
   },
   "trust": {
     "title": "Why Harkwise is trusted",
